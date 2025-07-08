@@ -1,3 +1,50 @@
 # 404-NOT-FOUND-HACKORBIT-FINAL
-## OUR PROJECT IS FULL STACK TOUR FEEDBACK SYSTEM WITH ADMIN PANEL. IN THIS CHECK POINT WE HAVE UPLOADED THE MAIN WEBSITE FRONTEND(MAIN SITE AND PRIVACY POLICY PAGE). WE WILL UPDATE THE ADMIN PANEL AND BACKEND LATER.
-## IN THIS CHECK POINT WE HAVE UPLOADED THE PPT AND FIXED SOME BUGS IN THE PREVIOUS WEBSITE UI.
+
+## Full Stack Tour Feedback System with Admin Panel ✨
+
+A complete web application for collecting tour package feedback with a secure admin dashboard.
+
+## 📝 User Feedback System (index.html):
+
+Elegant UI using Tailwind CSS and Font Awesome for modern design.
+
+Feedback Form collects:
+
+Full Name, Email, Phone
+
+Selected Tour Package
+
+Star Rating (1–5)
+
+Optional Comments
+
+Form Validation with JavaScript to ensure all required fields are filled.
+
+Interactive Elements include glowing hover/click effects for buttons, inputs, and labels.
+
+Responsive Navigation Bar for desktop and mobile views.
+
+Admin Panel Link included for feedback management (/admin/login).
+
+About Us & Contact Section to build trust and provide easy communication
+
+## Privacy Policy Page (privacy.html) explains:
+
+What data is collected
+
+How it is used and stored
+
+User rights (view/update/delete data)
+
+No third-party sharing
+
+Session-based cookies only
+
+## 🔒 Admin Login Panel (login.ejs):
+Simple and clean login form with:
+▪ Username & Password input
+▪ Error message handling via <%= error %> in EJS
+
+Back button to return to the main website.
+
+Styled with user-friendly CSS and form responsiveness.
