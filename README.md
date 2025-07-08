@@ -42,7 +42,9 @@ Session-based cookies only
 
 ## 🔒 Admin Login Panel (login.ejs):
 Simple and clean login form with:
+
 ▪ Username & Password input
+
 ▪ Error message handling via <%= error %> in EJS
 
 Back button to return to the main website.
@@ -62,3 +64,28 @@ Timestamp of Submission
 Data populated using EJS with server-side values (feedbacks[])
 
 Logout button redirects securely via tokenized link
+
+## 🛢️ PostgreSQL Table Schema:
+
+```bash
+CREATE TABLE feedback (
+id SERIAL PRIMARY KEY,
+full_name TEXT NOT NULL,
+email TEXT NOT NULL,
+phone TEXT,
+package TEXT NOT NULL,
+rating INT NOT NULL,
+comments TEXT,
+submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+Table Fields:
+
+id: Auto-increment primary key
+
+full_name, email, phone: User details
+
+package, rating, comments: Feedback content
+
+submitted_at: Timestamp (no timezone)
