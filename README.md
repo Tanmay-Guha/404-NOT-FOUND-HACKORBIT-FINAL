@@ -89,3 +89,16 @@ full_name, email, phone: User details
 package, rating, comments: Feedback content
 
 submitted_at: Timestamp (no timezone)
+
+# NEXT DAY PLAN:-
+IMPLEMENT BACKEND
+
+MAKE CONNECTION BETWEEN FRONTEND-BACKEND-DATABASE
+
+INSTALL DEPENDENCIES
+
+RUN FULL PROJECT
+
+CHECK FULL WORKING PROCESS
+
+FINAL README UPDATE
