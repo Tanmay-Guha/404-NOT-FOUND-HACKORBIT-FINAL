@@ -48,3 +48,17 @@ Simple and clean login form with:
 Back button to return to the main website.
 
 Styled with user-friendly CSS and form responsiveness.
+
+## 📊 Admin Feedback Dashboard (dashboard.ejs):
+
+Displays all feedback in a clean, sortable table:
+
+ID, Name, Email, Phone
+
+Selected Package, Star Rating (★), Comments
+
+Timestamp of Submission
+
+Data populated using EJS with server-side values (feedbacks[])
+
+Logout button redirects securely via tokenized link
