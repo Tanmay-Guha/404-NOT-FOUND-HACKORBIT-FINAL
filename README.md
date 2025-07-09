@@ -200,3 +200,18 @@ Configured using pg.Pool with credentials (user: postgres, db: feedback_db)
 Views Directory: /views with EJS templates
 
 Server Runs on: http://localhost:5000
+
+## 🔗 Frontend–Backend–Database Connection
+✅ How They Work Together:
+
+Frontend (index.html)
+→ Collects feedback via form and sends to backend using fetch().
+
+Backend (index.js)
+→ Receives form data and inserts it into the feedback table in PostgreSQL.
+
+PostgreSQL
+→ Stores all submitted feedback entries securely.
+
+Admin Panel
+→ Admin logs in → dashboard loads data from database → renders in EJS table view.
