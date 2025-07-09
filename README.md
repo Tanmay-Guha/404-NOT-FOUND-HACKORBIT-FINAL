@@ -2,7 +2,89 @@
 
 ## Full Stack Tour Feedback System with Admin Panel ✨
 
-A complete web application for collecting tour package feedback with a secure admin dashboard.
+A complete web application for collecting tour package feedback with a secure admin dashboard. Built with **Node.js, Express, PostgreSQL, and EJS**.
+
+## **Features** 🌟
+- **User-Friendly Feedback Form** (with validation)
+- **Admin Dashboard** (view all submissions)
+- **Secure Authentication** (username/password protected)
+- **Responsive Design** (works on mobile/desktop)
+
+---
+
+## **Prerequisites** 📋
+1. **Node.js** (v14+)
+2. **PostgreSQL** (installed and running)
+3. **Git** (optional)
+
+---
+
+## **Setup Instructions** 🛠️
+
+### **1. Install Dependencies**
+```bash
+npm install **OR** npm install express body-parser cors pg ejs
+```
+
+### **2. Start the Server**
+```bash
+node index.js
+```
+The server will run at:  
+🌐 **Main Site**: [http://localhost:5000](http://localhost:5000)  
+🔐 **Admin Panel**: [http://localhost:5000/admin/login](http://localhost:5000/admin/login)  
+
+---
+
+## **Usage Guide** 📖
+
+### **1. Submit Feedback**
+- Visit [http://localhost:5000](http://localhost:5000)
+- Fill out the form and submit.
+
+### **2. Access Admin Dashboard**
+- Go to [http://localhost:5000/admin/login](http://localhost:5000/admin/login)
+- **Default Credentials**:
+  - **Username**: `admin`
+  - **Password**: `admin123`
+- View all feedback submissions in the dashboard.
+
+### **3. Logout**
+- Click **"Logout"** in the admin panel to return to the login page.
+
+---
+
+## **Project Structure** 📂
+```
+tour-feedback-system/
+├── public/            # Static files (HTML, CSS, JS)
+│   ├── index.html     # Feedback form
+│   └── privacy.html   # Privacy Policies
+├── views/             # EJS templates
+│   ├── login.ejs      # Admin login page
+│   └── dashboard.ejs  # Admin dashboard
+├── index.js           # Backend server
+├── package.json       # Dependencies need to install by step 1
+└── README.md          # This file
+```
+
+---
+
+## **License** 📜
+MIT License - Free for personal and educational use.
+
+---
+
+## **Credits** 🙌
+- Built with ❤️ by **404 NOT FOUND**
+- **Tailwind CSS** for styling
+- **Font Awesome** for icons
+
+---
+
+### **Enjoy using the Tour Feedback System!** 🚀
+---
+# EACH FILE DETAILS:-
 
 ## 📝 User Feedback System (index.html):
 
@@ -65,7 +147,7 @@ Data populated using EJS with server-side values (feedbacks[])
 
 Logout button redirects securely via tokenized link
 
-## 🛢️ PostgreSQL Table Schema:
+## 🛢️ PostgreSQL Table Schema (Database Screenshots) :
 
 ```bash
 CREATE TABLE feedback (
@@ -90,15 +172,31 @@ package, rating, comments: Feedback content
 
 submitted_at: Timestamp (no timezone)
 
-# NEXT DAY PLAN:-
-IMPLEMENT BACKEND
+## 💻 Backend Server (index.js):
+Built with: Express, EJS, body-parser, pg, and CORS
 
-MAKE CONNECTION BETWEEN FRONTEND-BACKEND-DATABASE
+Endpoints:
 
-INSTALL DEPENDENCIES
+POST /submit: Stores feedback in PostgreSQL
 
-RUN FULL PROJECT
+GET /admin/login: Render login page
 
-CHECK FULL WORKING PROCESS
+POST /admin/login: Authenticate admin
 
-FINAL README UPDATE
+GET /admin/dashboard: Render dashboard (auth protected)
+
+GET /admin/logout: Invalidate session
+
+Auth:
+
+Token-based in-memory session (authToken)
+
+Middleware requireAuth() to protect dashboard
+
+DB Connection:
+
+Configured using pg.Pool with credentials (user: postgres, db: feedback_db)
+
+Views Directory: /views with EJS templates
+
+Server Runs on: http://localhost:5000
